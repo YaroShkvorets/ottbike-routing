@@ -5802,7 +5802,7 @@ function fetchDirections() {
     options.push('access_token=' + accessToken);
     request.abort();
     //request.open('GET', api + 'mapbox/' + profile + '/' + query + '.json?' + options.join('&'), true);
-    request.open('GET', api + query + '?alternatives=true&steps=true&geometries=polyline&overview=full&annotations=true', true);
+    request.open('GET', api +'/'+profile+'/'+ query + '?alternatives=true&steps=true&geometries=polyline&overview=full&annotations=true', true);
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
         var data = JSON.parse(request.responseText);
@@ -6436,7 +6436,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
  // substack/brfs#39
-var tmpl = (0, _lodash2.default)("<div class='mapbox-directions-component mapbox-directions-inputs'>\n  <div class='mapbox-directions-component-keyline'>\n    <div class='mapbox-directions-origin'>\n      <label class='mapbox-form-label'>\n        <span class='directions-icon directions-icon-depart'></span>\n      </label>\n      <div id='mapbox-directions-origin-input'></div>\n    </div>\n\n    <button\n      class='directions-icon directions-icon-reverse directions-reverse js-reverse-inputs'\n      title='Reverse origin &amp; destination'>\n    </button>\n\n    <div class='mapbox-directions-destination'>\n      <label class='mapbox-form-label'>\n        <span class='directions-icon directions-icon-arrive'></span>\n      </label>\n      <div id='mapbox-directions-destination-input'></div>\n    </div>\n  </div>\n\n  <div class='mapbox-directions-profile mapbox-directions-component-keyline mapbox-directions-clearfix'><input\n      id='mapbox-directions-profile-driving-traffic'\n      type='radio'\n      name='profile'\n      <% if (profile === 'driving-traffic') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-driving-traffic'>Traffic</label>\n    <input\n      id='mapbox-directions-profile-driving'\n      type='radio'\n      name='profile'\n      <% if (profile === 'driving') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-driving'>Driving</label>\n    <input\n      id='mapbox-directions-profile-walking'\n      type='radio'\n      name='profile'\n      <% if (profile === 'walking') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-walking'>Walking</label>\n    <input\n      id='mapbox-directions-profile-cycling'\n      type='radio'\n      name='profile'\n      <% if (profile === 'cycling') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-cycling'>Cycling</label>\n  </div>\n</div>\n");
+var tmpl = (0, _lodash2.default)("<div class='mapbox-directions-component mapbox-directions-inputs'>\n  <div class='mapbox-directions-component-keyline'>\n    <div class='mapbox-directions-origin'>\n      <label class='mapbox-form-label'>\n        <span class='directions-icon directions-icon-depart'></span>\n      </label>\n      <div id='mapbox-directions-origin-input'></div>\n    </div>\n\n    <button\n      class='directions-icon directions-icon-reverse directions-reverse js-reverse-inputs'\n      title='Reverse origin &amp; destination'>\n    </button>\n\n    <div class='mapbox-directions-destination'>\n      <label class='mapbox-form-label'>\n        <span class='directions-icon directions-icon-arrive'></span>\n      </label>\n      <div id='mapbox-directions-destination-input'></div>\n    </div>\n  </div>\n\n  <div class='mapbox-directions-profile mapbox-directions-component-keyline mapbox-directions-clearfix'><input\n      id='mapbox-directions-profile-lts1'\n      type='radio'\n      name='profile'\n      <% if (profile === 'lts1') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-lts1'>LTS-1</label>\n    <input\n      id='mapbox-directions-profile-lts2'\n      type='radio'\n      name='profile'\n      <% if (profile === 'lts2') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-lts2'>LTS-2</label>\n    <input\n      id='mapbox-directions-profile-lts3'\n      type='radio'\n      name='profile'\n      <% if (profile === 'lts3') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-lts3'>LTS-3</label>\n    <input\n      id='mapbox-directions-profile-lts4'\n      type='radio'\n      name='profile'\n      <% if (profile === 'lts4') { %>checked<% } %>\n    />\n    <label for='mapbox-directions-profile-lts4'>LTS-4</label>\n  </div>\n</div>\n");
 
 /**
  * Inputs controller
@@ -6491,7 +6491,7 @@ var Inputs = function () {
           features: [origin, destination]
         });
 
-        this._map.fitBounds([[bb[0], bb[1]], [bb[2], bb[3]]], { padding: 80 });
+        this._map.fitBounds([[bb[0], bb[1]], [bb[2], bb[3]]], { padding: 150 });
       } else {
         this._map.flyTo({ center: coords });
       }
@@ -6550,7 +6550,7 @@ var Inputs = function () {
 
       this.destinationInput.on('clear', clearDestination);
 
-      // Driving / Walking / Cycling profiles
+      // profiles
       var profiles = this.container.querySelectorAll('input[type="radio"]');
       Array.prototype.forEach.call(profiles, function (el) {
         el.addEventListener('change', function () {
@@ -6803,8 +6803,8 @@ var store = storeWithMiddleware(_reducers2.default);
  * @param {Array} [options.styles] Override default layer properties of the [directions source](https://github.com/mapbox/mapbox-gl-directions/blob/master/src/directions_style.js). Documentation for each property are specified in the [Mapbox GL Style Reference](https://www.mapbox.com/mapbox-gl-style-spec/).
  * @param {String} [options.accessToken=null] Required unless `mapboxgl.accessToken` is set globally
  * @param {Boolean} [options.interactive=true] Enable/Disable mouse or touch interactivity from the plugin
- * @param {String} [options.profile="driving-traffic"] Routing profile to use. Options: `driving-traffic`, `driving`, `walking`, `cycling`
- * @param {String} [options.unit="imperial"] Measurement system to be used in navigation instructions. Options: `imperial`, `metric`
+ * @param {String} [options.profile="lts1"] Routing profile to use. Options: `lts1`, `lts2`, `lts3`, `lts4`
+ * @param {String} [options.unit="metric"] Measurement system to be used in navigation instructions. Options: `imperial`, `metric`
  * @param {Object} [options.geocoder] Pass options available to mapbox-gl-geocoder as [documented here](https://github.com/mapbox/mapbox-gl-geocoder/blob/master/API.md#mapboxglgeocoder).
  * @param {Object} [options.controls]
  * @param {Boolean} [options.controls.inputs=true] Hide or display the inputs control.
@@ -6814,7 +6814,7 @@ var store = storeWithMiddleware(_reducers2.default);
  * var directions = new MapboxDirections({
  *   accessToken: 'YOUR-MAPBOX-ACCESS-TOKEN',
  *   unit: 'metric',
- *   profile: 'cycling'
+ *   profile: 'lts4'
  * });
  * // add to your mapboxgl map
  * map.addControl(directions);
@@ -7327,7 +7327,7 @@ var MapboxDirections = function () {
      *
      * - __clear__ `{ type: } Type is one of 'origin' or 'destination'`
      * - __loading__ `{ type: } Type is one of 'origin' or 'destination'`
-     * - __profile__ `{ profile } Profile is one of 'driving', 'walking', or 'cycling'`
+     * - __profile__ `{ profile } Profile is one of 'lts1', 'lts2', or 'lts3', or 'lts4'`
      * - __origin__ `{ feature } Fired when origin is set`
      * - __destination__ `{ feature } Fired when destination is set`
      * - __route__ `{ route } Fired when a route is updated`
@@ -7422,7 +7422,7 @@ var style = [{
   'type': 'circle',
   'source': 'directions',
   'paint': {
-    'circle-radius': 18,
+    'circle-radius': 10,
     'circle-color': '#3bb2d0'
   },
   'filter': ['all', ['in', '$type', 'Point'], ['in', 'marker-symbol', 'A']]
@@ -7444,7 +7444,7 @@ var style = [{
   'type': 'circle',
   'source': 'directions',
   'paint': {
-    'circle-radius': 18,
+    'circle-radius': 10,
     'circle-color': '#8a8bc9'
   },
   'filter': ['all', ['in', '$type', 'Point'], ['in', 'marker-symbol', 'B']]
@@ -7498,8 +7498,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var initialState = {
   // Options set on initialization
   api: 'https://api.mapbox.com/directions/v5/',
-  profile: 'driving-traffic',
-  unit: 'imperial',
+  profile: 'lts4',
+  unit: 'metric',
   proximity: false,
   styles: [],
 
