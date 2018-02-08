@@ -7377,7 +7377,7 @@ var style = [{
     'line-join': 'round'
   },
   'paint': {
-    'line-color': '#3bb2d0',
+    'line-color': '#9c27e4',
     'line-width': 4
   },
   'filter': ['all', ['in', '$type', 'LineString'], ['in', 'route', 'selected']]
