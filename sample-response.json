@@ -1,0 +1,323 @@
+{
+  "code": "Ok",
+  "routes": [{
+    "geometry": "chftGzb`mMlApDFTROvAkANMJIzAoAJINM~BqBRONMzAoALIHIlB{AzBiBnB_BPOm@mBW}@",
+    "legs": [{
+      "annotation": {
+        "nodes": [3187985665, 3130664645, 901054607, 3130664643, 3130664642, 901059401, 3130664639, 3088025085, 901055303, 3088025082, 3192696067, 901048316, 3192696064, 3192696063, 901063508, 3192696061, 901049400, 901066149, 2872856135, 901062361, 1451135544, 3097517705],
+        "datasources": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "weight": [49, 6, 2.9, 13.8, 2.5, 1.8, 14.5, 2, 2.5, 20.1, 3, 2.4, 14.5, 2, 1.8, 17, 19.2, 17.6, 2.6, 12, 6.5],
+        "distance": [81.617519, 9.920604, 12.218881, 57.555163, 10.306666, 7.404618, 60.281221, 8.313271, 10.52489, 83.731677, 12.300529, 10.130581, 60.527427, 8.177765, 7.500141, 70.683727, 80.176914, 73.179127, 11.039344, 50.064205, 27.30536],
+        "duration": [49, 6, 2.9, 13.8, 2.5, 1.8, 14.5, 2, 2.5, 20.1, 3, 2.4, 14.5, 2, 1.8, 17, 19.2, 17.6, 2.6, 12, 6.5],
+        "speed": [1.7, 1.7, 4.2, 4.2, 4.1, 4.1, 4.2, 4.2, 4.2, 4.2, 4.1, 4.2, 4.2, 4.1, 4.2, 4.2, 4.2, 4.2, 4.2, 4.2, 4.2]
+      },
+      "summary": "Queen Street, Bank Street",
+      "weight": 242.1,
+      "duration": 242.1,
+      "steps": [{
+        "intersections": [{
+          "out": 0,
+          "entry": [true],
+          "bearings": [238],
+          "location": [-75.699823, 45.420978]
+        }],
+        "driving_side": "right",
+        "geometry": "chftGzb`mMlApDFT",
+        "mode": "pushing bike",
+        "maneuver": {
+          "bearing_after": 238,
+          "bearing_before": 0,
+          "location": [-75.699823, 45.420978],
+          "type": "depart"
+        },
+        "weight": 65.3,
+        "duration": 65.3,
+        "name": "Queen Street",
+        "distance": 91.5
+      }, {
+        "intersections": [{
+          "out": 1,
+          "in": 0,
+          "entry": [false, true, true, true],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.700821, 45.420546]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.70029, 45.41993]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.699787, 45.419345]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.699065, 45.418532]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.698546, 45.417924]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.698041, 45.417317]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.69751, 45.4167]
+        }],
+        "driving_side": "right",
+        "geometry": "meftGbi`mMROvAkANMJIzAoAJINM~BqBRONMzAoALIHIlB{AzBiBnB_BPO",
+        "mode": "cycling",
+        "maneuver": {
+          "bearing_after": 147,
+          "bearing_before": 237,
+          "location": [-75.700821, 45.420546],
+          "modifier": "left",
+          "type": "turn"
+        },
+        "weight": 158.3,
+        "duration": 158.3,
+        "name": "Bank Street",
+        "distance": 584.1
+      }, {
+        "intersections": [{
+          "out": 0,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.696952, 45.416052]
+        }],
+        "driving_side": "right",
+        "geometry": "iietG|p_mMm@mBW}@",
+        "mode": "cycling",
+        "maneuver": {
+          "bearing_after": 59,
+          "bearing_before": 147,
+          "location": [-75.696952, 45.416052],
+          "modifier": "left",
+          "type": "turn"
+        },
+        "weight": 18.5,
+        "duration": 18.5,
+        "name": "Cooper Street",
+        "distance": 77.4
+      }, {
+        "intersections": [{
+          "in": 0,
+          "entry": [true],
+          "bearings": [239],
+          "location": [-75.696094, 45.4164]
+        }],
+        "driving_side": "right",
+        "geometry": "oketGpk_mM",
+        "mode": "cycling",
+        "maneuver": {
+          "bearing_after": 0,
+          "bearing_before": 59,
+          "location": [-75.696094, 45.4164],
+          "type": "arrive"
+        },
+        "weight": 0,
+        "duration": 0,
+        "name": "Cooper Street",
+        "distance": 0
+      }],
+      "distance": 753
+    }],
+    "weight_name": "duration",
+    "weight": 242.1,
+    "duration": 242.1,
+    "distance": 753
+  }, {
+    "geometry": "chftGzb`mMkAqDISFEp@i@LMXSFGNMLKzAqAJINKhB}A\\WNMLK~AsAJIJIlB_BlB}AHIHIjB{AHGFRHRb@hAVz@FNNf@",
+    "legs": [{
+      "annotation": {
+        "nodes": [3130664645, 3187985665, 901047531, 3187985666, 2456098868, 2456098867, 1821610615, 3187979744, 901063072, 3187979741, 3088026214, 901065600, 3088026211, 4824077171, 3187986386, 901050945, 3187986383, 3187985674, 901058032, 3187985671, 901062618, 3158748350, 901046330, 3158748347, 901057532, 1451114617, 5255484259, 1451114620, 1451114494, 1451114619, 3097517705, 1451135544],
+        "datasources": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "weight": [19.5, 2.2, 1.2, 7.8, 2.3, 3.9, 1.4, 2.5, 2.1, 14.6, 1.9, 2.3, 16.7, 4.6, 2.5, 2.3, 15, 1.9, 1.8, 17.1, 17.2, 1.7, 1.6, 16.7, 1.6, 5.6, 5.8, 20.9, 16.4, 4.6, 10.9],
+        "distance": [81.550666, 9.155389, 4.814274, 32.425088, 9.398018, 16.260091, 5.858498, 10.577893, 8.544157, 60.714152, 7.811356, 9.628603, 69.66491, 19.121676, 10.306694, 9.548548, 62.436875, 7.947015, 7.309653, 71.21144, 71.754038, 6.998052, 6.808086, 69.625222, 6.536769, 9.413787, 9.605016, 34.827074, 27.295048, 7.638244, 18.083522],
+        "duration": [19.5, 2.2, 1.2, 7.8, 2.3, 3.9, 1.4, 2.5, 2.1, 14.6, 1.9, 2.3, 16.7, 4.6, 2.5, 2.3, 15, 1.9, 1.8, 17.1, 17.2, 1.7, 1.6, 16.7, 1.6, 5.6, 5.8, 20.9, 16.4, 4.6, 10.9],
+        "speed": [4.2, 4.2, 4, 4.2, 4.1, 4.2, 4.2, 4.2, 4.1, 4.2, 4.1, 4.2, 4.2, 4.2, 4.1, 4.2, 4.2, 4.2, 4.1, 4.2, 4.2, 4.1, 4.3, 4.2, 4.1, 1.7, 1.7, 1.7, 1.7, 1.7, 1.7]
+      },
+      "summary": "O'Connor Street, Cooper Street",
+      "weight": 247.1,
+      "duration": 247.1,
+      "steps": [{
+        "intersections": [{
+          "out": 0,
+          "entry": [true],
+          "bearings": [58],
+          "location": [-75.699823, 45.420978]
+        }],
+        "driving_side": "right",
+        "geometry": "chftGzb`mMkAqDIS",
+        "mode": "cycling",
+        "maneuver": {
+          "bearing_after": 58,
+          "bearing_before": 0,
+          "location": [-75.699823, 45.420978],
+          "type": "depart"
+        },
+        "weight": 28,
+        "duration": 28,
+        "name": "Queen Street",
+        "distance": 90.7
+      }, {
+        "intersections": [{
+          "out": 1,
+          "in": 2,
+          "entry": [true, true, false, true],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.698834, 45.421406]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.698305, 45.420797]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.697792, 45.420205]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.697068, 45.41937]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.696536, 45.418756]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.696013, 45.418153]
+        }, {
+          "out": 1,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.695489, 45.417548]
+        }, {
+          "out": 1,
+          "in": 2,
+          "entry": [true, true, false],
+          "bearings": [105, 150, 330],
+          "location": [-75.69498, 45.416961]
+        }],
+        "driving_side": "right",
+        "geometry": "yjftGt|_mMFEp@i@LMXSFGNMLKzAqAJINKhB}A\\WNMLK~AsAJIJIlB_BlB}AHIHIjB{AHG",
+        "mode": "cycling",
+        "maneuver": {
+          "bearing_after": 147,
+          "bearing_before": 57,
+          "location": [-75.698834, 45.421406],
+          "modifier": "right",
+          "type": "turn"
+        },
+        "weight": 154.9,
+        "duration": 154.9,
+        "name": "O'Connor Street",
+        "distance": 585.3
+      }, {
+        "intersections": [{
+          "out": 2,
+          "in": 3,
+          "entry": [true, true, true, false],
+          "bearings": [60, 150, 240, 330],
+          "location": [-75.694936, 45.416911]
+        }],
+        "driving_side": "right",
+        "geometry": "unetGjd_mMFRHRb@hA",
+        "mode": "pushing bike",
+        "maneuver": {
+          "bearing_after": 237,
+          "bearing_before": 147,
+          "location": [-75.694936, 45.416911],
+          "modifier": "right",
+          "type": "turn"
+        },
+        "weight": 32.3,
+        "duration": 32.3,
+        "name": "",
+        "distance": 53.8
+      }, {
+        "intersections": [{
+          "out": 2,
+          "in": 0,
+          "entry": [false, true, true],
+          "bearings": [55, 60, 239],
+          "location": [-75.695509, 45.416642]
+        }],
+        "driving_side": "right",
+        "geometry": "_metG|g_mMVz@FNNf@",
+        "mode": "pushing bike",
+        "maneuver": {
+          "bearing_after": 239,
+          "bearing_before": 234,
+          "location": [-75.695509, 45.416642],
+          "modifier": "straight",
+          "type": "turn"
+        },
+        "weight": 31.9,
+        "duration": 31.9,
+        "name": "Cooper Street",
+        "distance": 53
+      }, {
+        "intersections": [{
+          "in": 0,
+          "entry": [true],
+          "bearings": [60],
+          "location": [-75.696094, 45.4164]
+        }],
+        "driving_side": "right",
+        "geometry": "oketGpk_mM",
+        "mode": "pushing bike",
+        "maneuver": {
+          "bearing_after": 0,
+          "bearing_before": 240,
+          "location": [-75.696094, 45.4164],
+          "type": "arrive"
+        },
+        "weight": 0,
+        "duration": 0,
+        "name": "Cooper Street",
+        "distance": 0
+      }],
+      "distance": 782.9
+    }],
+    "weight_name": "duration",
+    "weight": 247.1,
+    "duration": 247.1,
+    "distance": 782.9
+  }],
+  "waypoints": [{
+    "hint": "PGAAgBJlAIDpAQAAxQAAADcAAAAYAAAA6QEAAMUAAAA3AAAAGAAAAAsAAACR6Xz7shG1ApHpfPuyEbUCAQDvDrwNtvg=",
+    "name": "Queen Street",
+    "location": [-75.699823, 45.420978]
+  }, {
+    "hint": "WWsAgKccAYBBAAAAbQAAAHgAAADSAAAAQQAAAG0AAAB4AAAA0gAAAAsAAAAi-Hz70P-0AgP4fPv1_7QCAQC_A7wNtvg=",
+    "name": "Cooper Street",
+    "location": [-75.696094, 45.4164]
+  }]
+}
