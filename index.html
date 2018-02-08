@@ -18,11 +18,11 @@
 <!--<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>-->
 <link rel='stylesheet' href='mapbox-gl-directions.css' type='text/css' />
 <div id='map'></div>
-<div class='pin-right pad2 '>
-  <a href='#legend' class='button'>Legend</a>
+<div id='legendbtn' class='pin-right pad2 '>
+  <a href='#legend' class='button' onclick="document.getElementById('legendbtn').style.display='none'">Legend</a>
 </div>
 <div id='legend' class='col4 pad2 row7 pin-right offcanvas-right '>
-  <a href='#' class='fill-darken2 pad1 icon close button fr'></a>
+  <a href='#' class='fill-darken2 pad1 icon close button fr' onclick="document.getElementById('legendbtn').style.display='block'"></a>
   <div class='clearfix'></div>
   <form>
     <h5>Street legend</h5>
