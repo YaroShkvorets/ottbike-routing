@@ -6518,7 +6518,8 @@ var Inputs = function () {
       this.originInput = new _geocoder2.default(Object.assign({}, {
         flyTo: false,
         placeholder: 'Choose a starting place',
-        accessToken: accessToken
+        accessToken: accessToken,
+        bbox:[-76.403046,45.050240,-75.101166,45.582329]
       }, geocoder));
 
       var originEl = this.originInput.onAdd();
@@ -6528,7 +6529,8 @@ var Inputs = function () {
       this.destinationInput = new _geocoder2.default(Object.assign({}, {
         flyTo: false,
         placeholder: 'Choose destination',
-        accessToken: accessToken
+        accessToken: accessToken,
+        bbox:[-76.403046,45.050240,-75.101166,45.582329]
       }, geocoder));
 
       var destinationEl = this.destinationInput.onAdd();
